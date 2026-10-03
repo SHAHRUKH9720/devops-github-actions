@@ -8,3 +8,10 @@ jobs:
       run: echo "Third First setp"
     - name: Third Second Step
       run:  echo "Third Second step"
+  Third-job-second:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Third Job Second First Step
+      run: echo "Third Job Second First Step"
+    - name: Third Job Second Second Step
+      run: echo "Third Job Second Second Step"
