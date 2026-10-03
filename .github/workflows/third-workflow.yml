@@ -1,0 +1,17 @@
+name: third workflow
+on: push
+jobs:
+  Third job one:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Third First step
+      run: echo "Third First setp"
+    - name: Third Second Step
+      run: ehco "Third Second step"
+  Third job second:
+    runs-on: ubuntu-latest
+    steps:
+    - name: second job step one
+      on: echo "second job step one"
+    - name: second job step two
+      on: echo "second job step two"
