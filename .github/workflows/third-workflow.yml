@@ -7,4 +7,4 @@ jobs:
     - name: Third First step
       run: echo "Third First setp"
     - name: Third Second Step
-      run: ehco "Third Second step"
+      run:  echo "Third Second step"
