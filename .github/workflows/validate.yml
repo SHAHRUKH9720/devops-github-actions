@@ -9,4 +9,4 @@ jobs:
     - name: validate-html-file
       run:  test -f index.html
     - name: validate-js-file
-      run:  test -f indx.js
+      run:  test -f index.js
