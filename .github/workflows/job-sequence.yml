@@ -1,28 +1,28 @@
-name: job-sequence
-on: push
-jobs:
-  validate-html:
-    runs-on: ubuntu-latest
-    steps:
-      - name: get-repo-code
-        uses: actions/checkout@v5
-      - name: validate-html-file
-        run:  test -f index.html
-  validate-js:
-    runs-on:  ubuntu-latest
-    steps:
-      - name: get-repo-code
-        uses: actions/checkout@v5
-      - name: validate-js-file
-        run:  test -f index.js
-  validate-code:
-    needs:  [validate-js,validate-html]
-    runs-on: ubuntu-latest
-    steps:
-      - name: get-repo-code
-        run:  actions/checkout@v5
-      - name: check js file
-        run:  node --check index.js
-      - name: check html code
-        run:  npx htmlint index.html 
+  name: job-sequence
+  on: push
+  jobs:
+    validate-html:
+      runs-on: ubuntu-latest
+      steps:
+        - name: get-repo-code
+          uses: actions/checkout@v5
+        - name: validate-html-file
+          run:  test -f index.html
+    validate-js:
+      runs-on:  ubuntu-latest
+      steps:
+        - name: get-repo-code
+          uses: actions/checkout@v5
+        - name: validate-js-file
+          run:  test -f index.js
+    validate-code:
+      needs:  [validate-js,validate-html]
+      runs-on: ubuntu-latest
+      steps:
+        - name: get-repo-code
+          uses:  actions/checkout@v5
+        - name: check js file
+          run:  node --check index.js
+        - name: check html code
+          run:  npx htmlint index.html 
 
