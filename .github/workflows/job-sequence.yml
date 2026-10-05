@@ -19,7 +19,7 @@ jobs:
     needs:  [validate-js,validate-html]
     runs-on: ubuntu-latest
     steps:
-      - nmae: get-repo-code
+      - name: get-repo-code
         run:  actions/checkout@v5
       - name: check js file
         run:  node --check index.js
