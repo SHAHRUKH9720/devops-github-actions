@@ -2,7 +2,7 @@ name: job-sequence
 on: push
 jobs:
   validate-html:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - name: get-repo-code
         uses: actions/checkout@v5
