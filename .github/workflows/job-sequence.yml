@@ -19,7 +19,9 @@ jobs:
     needs:  [validate-js,validate-html]
     runs-on: ubuntu-latest
     steps:
-      - name: check js code
+      - nmae: get-repo-code
+        run:  actions/checkout@v5
+      - name: check js file
         run:  node --check index.js
       - name: check html code
         run:  npx htmlint index.html 
