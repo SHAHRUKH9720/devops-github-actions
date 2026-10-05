@@ -16,7 +16,7 @@ jobs:
       - name: validate-js-file
         run:  test -f index.js
   validate-code:
-    needs:[validate-js,validate-html]:
+    needs:  [validate-js,validate-html]
     runs-on: ubuntu-latest
     steps:
       - name: check js code
